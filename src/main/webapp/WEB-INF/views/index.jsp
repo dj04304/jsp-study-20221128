@@ -7,8 +7,8 @@
 <title>메인 페이지</title>
 </head>
 <!-- /static 인 이유는 절대경로를 초기에 / 로 정해놨기 때문이다. -->
-<link rel= "stylesheet" href="/static/css/style.css">
-<link rel= "stylesheet" href="/static/css/index.css">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/index.css">
 <body>
 	<div id="container">
 		<header>
@@ -20,8 +20,6 @@
 				</ul>
 			</nav>
 		</header>
-	
-	
 		<main>
 		
 		</main>
