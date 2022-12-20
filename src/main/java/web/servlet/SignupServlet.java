@@ -21,17 +21,23 @@ public class SignupServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		request.getRequestDispatcher("/WEB-INF/views/signup.jsp").forward(request, response);
-		System.out.println(request.getParameter("name"));
-		System.out.println(request.getParameter("email"));
-		System.out.println(request.getParameter("username"));
-		System.out.println(request.getParameter("password"));
+		
+		if(request.getParameter("name") == null) {
+			request.getRequestDispatcher("/WEB-INF/views/signup.jsp").forward(request, response);
+		}else {
+			System.out.println(request.getParameter("name"));
+			System.out.println(request.getParameter("email"));
+			System.out.println(request.getParameter("username"));
+			System.out.println(request.getParameter("password"));
+		}
+		
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("회원가입 요청");
 		
+//		request.setCharacterEncoding("UTF-8");
 		System.out.println(request.getParameter("name"));
 		System.out.println(request.getParameter("email"));
 		System.out.println(request.getParameter("username"));
